@@ -5,6 +5,7 @@ Netz39fees::Application.routes.draw do
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
+  match 'fees/new' => 'fees#create', via: :post
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
@@ -12,7 +13,7 @@ Netz39fees::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :fees
+  resources :fees, only: [:index, :new, :create, :destroy]
 
   # Sample resource route with options:
   #   resources :products do

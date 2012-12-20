@@ -1,0 +1,20 @@
+<div class="row-fluid">
+  <div class="span4 offset4">
+    <h2>fees and donations</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr><th>Name</th><th>Fee</th><th>Donation</th><th></th></tr>
+      </thead>
+      <tbody>
+        <% @fees.each do |fee| %>
+          <tr>
+            <td><%= fee.name %></td>
+            <td><%= fee.fee %></td>
+            <td><%= fee.donation %></td>
+            <td><%= link_to "delete", fee_path(fee), method: :delete, confirm: "Do you really want to delete this fee?", class: "btn btn-danger btn-mini pull-right" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
