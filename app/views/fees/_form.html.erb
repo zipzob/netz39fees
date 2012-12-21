@@ -2,6 +2,6 @@
   <%= f.alert_message "Please fix the errors below." %>
   <%= f.text_field :name, class: "span4" %>
   <%= f.select :fee, [["30€ (full membership)", 30], ["8€ (discount membership)", 8]], {}, {class: "span4"} %>
-  <%= f.text_field :donation, class: "span4" %>
+  <%= f.text_field :donation, label: "Donation (optional)", class: "span4" %>
   <%= f.submit "Save", { disable_with: "Saving...", class: "btn btn-primary pull-right" } %>
 <% end %>
