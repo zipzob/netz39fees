@@ -1,7 +1,7 @@
-<%= bootstrap_form_for(@fee, url: fees_new_url, help: :block, html: {class: 'well'}) do |f| %>
+<%= bootstrap_form_for(@fee, url: fees_new_url, help: :block) do |f| %>
   <%= f.alert_message "Please fix the errors below." %>
-  <%= f.text_field :name, class: 'span12' %>
-  <%= f.select :fee, [ ['30€ (full membership)', 30], ['8€ (discount membership)', 8]], {}, {class: 'span12'} %>
-  <%= f.text_field :donation, class: 'span12' %>
-  <%= f.primary 'Save', disable_with: 'Saving...' %>
+  <%= f.text_field :name, class: "span4" %>
+  <%= f.select :fee, [["30€ (full membership)", 30], ["8€ (discount membership)", 8]], {}, {class: "span4"} %>
+  <%= f.text_field :donation, class: "span4" %>
+  <%= f.submit "Save", { disable_with: "Saving...", class: "btn btn-primary pull-right" } %>
 <% end %>

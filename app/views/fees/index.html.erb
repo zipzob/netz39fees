@@ -1,5 +1,5 @@
-<div class="row-fluid">
-  <div class="span4 offset4">
+<div class="row">
+  <div class="span6 offset3">
     <h2>fees and donations</h2>
     <table class="table table-striped">
       <thead>
@@ -9,8 +9,8 @@
         <% @fees.each do |fee| %>
           <tr>
             <td><%= fee.name %></td>
-            <td><%= fee.fee %></td>
-            <td><%= fee.donation %></td>
+            <td><%= "#{fee.fee}€" %></td>
+            <td><%= "#{fee.donation}€" %></td>
             <td><%= link_to "delete", fee_path(fee), method: :delete, confirm: "Do you really want to delete this fee?", class: "btn btn-danger btn-mini pull-right" %></td>
           </tr>
         <% end %>
