@@ -2,9 +2,17 @@
   <div class="span6 offset3">
     <h2>fees and donations</h2>
     <p class="lead">Enter your full name, the monthly fee you need to pay and the amount of your monthly donation.</p>
+    <p><span class="label label-important">Important</span> If possible, use the email address you had used for signing up Netz39 e.V. membership!</p>
   </div>
   
   <div class="span4 offset4">
-    <%= render 'form' %>
+    <%= bootstrap_form_for(@fee, url: fees_new_url, help: :block) do |f| %>
+      <%= f.alert_message "Please fix the errors below." %>
+      <%= f.text_field :name, class: "span4" %>
+      <%= f.email_field :email, class: "span4" %>
+      <%= f.select :fee, [["30€ (full membership)", 30], ["8€ (discount membership)", 8]], {}, {class: "span4"} %>
+      <%= f.text_field :donation, label: "Donation (optional)", class: "span4" %>
+      <%= f.submit "Save", { disable_with: "Saving...", class: "btn btn-primary pull-right" } %>
+    <% end %>
   </div>
 </div>

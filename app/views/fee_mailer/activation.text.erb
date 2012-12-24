@@ -1,0 +1,18 @@
+Hello <%= @fee.name %>
+
+Your fee: <%= "#{@fee.fee} €" %>
+Your donation: <%= "#{@fee.donation} €" %>
+
+Please click the link below, to activate your fee.
+
+<%= root_url %>fees/activate/<%= @fee.activation_token %>
+
+
+To edit your fee, please use the next link.
+
+<%= root_url %>fees/edit/<%= @fee.activation_token %>
+
+
+If your have not created a fee, ignore this email.
+
+Netz39 e.V.
