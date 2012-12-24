@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(:version => 20121222092950) do
     t.string   "name"
     t.float    "fee"
     t.float    "donation"
-    t.datetime "created_at",                            :null => false
-    t.datetime "updated_at",                            :null => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
     t.string   "email"
     t.string   "activation_token"
-    t.boolean  "activated",          :default => false
+    t.boolean  "activated",        :default => false
   end
 
 end

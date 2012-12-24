@@ -4,8 +4,10 @@ one:
   name: MyString
   fee: 1.5
   donation: 1.5
+  email: myemail@example.com
 
 two:
   name: MyString
   fee: 1.5
   donation: 1.5
+  email: myemail@example.com
