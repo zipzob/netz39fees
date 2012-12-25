@@ -9,7 +9,7 @@ class FeesController < InheritedResources::Base
   def activate
     @fee = Fee.find_by_activation_token(params[:token])
     if @fee
-      @fee.activated = 1
+      @fee.activated = true
       @fee.save
     end
   end

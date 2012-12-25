@@ -8,7 +8,7 @@ class Fee < ActiveRecord::Base
                        unless: Proc.new { |a| a.donation.blank? },
                        on: :create
   before_create :generate_activation_token
-  after_save :send_activation_email
+  after_create :send_activation_email
   
   private
   
