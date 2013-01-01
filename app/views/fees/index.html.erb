@@ -7,7 +7,7 @@
       </thead>
       <tbody>
         <% @fees.each do |fee| %>
-          <% if fee.activated? %>
+          <% if fee.confirmed? %>
             <tr>
               <td><%= fee.name %></td>
               <td><%= fee.email %></td>

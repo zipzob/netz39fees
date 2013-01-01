@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(:version => 20121222092950) do
     t.datetime "created_at",                          :null => false
     t.datetime "updated_at",                          :null => false
     t.string   "email"
-    t.string   "activation_token"
-    t.boolean  "activated",        :default => false
+    t.string   "confirmation_token"
+    t.boolean  "confirmed",        :default => false
   end
 
 end

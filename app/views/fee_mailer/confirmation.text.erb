@@ -1,16 +1,16 @@
-Hello <%= @fee.name %>
+Hello <%= @fee.name %>,
 
 Your fee: <%= "#{@fee.fee} €" %>
 Your donation: <%= "#{@fee.donation} €" %>
 
-Please click the link below, to activate your fee.
+Please click the link below, to confirm your fee.
 
-<%= root_url %>fees/activate/<%= @fee.activation_token %>
+<%= root_url %>fees/confirm/<%= @fee.confirmation_token %>
 
 
 To edit your fee, please use the next link.
 
-<%= root_url %>fees/edit/<%= @fee.activation_token %>
+<%= root_url %>fees/edit/<%= @fee.confirmation_token %>
 
 
 If your have not created a fee, ignore this email.

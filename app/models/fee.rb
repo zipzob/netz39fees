@@ -7,19 +7,19 @@ class Fee < ActiveRecord::Base
   validates :donation, numericality: true,
                        unless: Proc.new { |a| a.donation.blank? },
                        on: :create
-  before_create :generate_activation_token
-  after_create :send_activation_email
+  before_create :generate_confirmation_token
+  after_create :send_confirmation_email
   
   private
   
-  def generate_activation_token
+  def generate_confirmation_token
     begin
       token = SecureRandom.urlsafe_base64
-    end while Fee.where(activation_token: token).exists?
-    self.activation_token = token
+    end while Fee.where(confirmation_token: token).exists?
+    self.confirmation_token = token
   end
   
-  def send_activation_email
-    FeeMailer.activation(self).deliver
+  def send_confirmation_email
+    FeeMailer.confirmation(self).deliver
   end
 end

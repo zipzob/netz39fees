@@ -1,8 +1,8 @@
 class FeeMailer < ActionMailer::Base
   default from: "kontakt@netz39.de"
   
-  def activation(fee)
+  def confirmation(fee)
     @fee = fee
-    mail(to: fee.email, subject: "Fee activation")
+    mail(to: fee.email, subject: "Fee confirmation")
   end
 end
