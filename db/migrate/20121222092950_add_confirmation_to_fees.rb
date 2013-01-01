@@ -1,4 +1,4 @@
-class AddActivationToFees < ActiveRecord::Migration
+class AddConfirmationToFees < ActiveRecord::Migration
   def change
     add_column :fees, :email, :string
     add_column :fees, :confirmation_token, :string
