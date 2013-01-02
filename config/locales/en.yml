@@ -1,5 +1,19 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  title: "fees and donations"
+  text: "Enter your full name, select your appropriate fee and enter the hight of your monthly donation."
+  edit_text: "You can change the monthly fee you need to pay and the amount of your monthly donation."
+  important: "Important"
+  important_text: "If possible, use the email address you previously used for signing up with Netz39 e.V.!"
+  alert_message: "Please fix the errors below."
+  fee_email_send_alert: "Fee was successfully created. An email with a confirmation link was send to your email address. Please click this link to confirm your fee."
+  confirm_success: "<h4>Success!</h4>Your fee has been confirmed."
+  confirm_error: "<h4>Error!</h4>The fee you're trying to confirm seem to be not existing."
+  fee_update: "Successfully updated fee."
+  
+  fee: "Fee"
+  donation: "Donation (optional)"
+  full: "30€ (full membership)"
+  discount: "8€ (discount membership)"
+
+  save: "Save"
+  saving: "Saving..."

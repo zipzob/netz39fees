@@ -1,15 +1,13 @@
 <div class="row">
   <div class="span6 offset3">
-    <h2>fees and donations</h2>
+    <h2><%= t :title %></h2>
     <% if @fee %>
       <div class="alert alert-success alert-block">
-        <h4>Success!</h4>
-        Your fee has been confirmed.
+        <%= t(:confirm_success).html_safe %>
       </div>
     <% else %>
       <div class="alert alert-error alert-block">
-        <h4>Error!</h4>
-        The fee you're trying to confirm seem to be not existing.
+        <%= t(:confirm_error).html_safe %>
       </div>
     <% end %>
   </div>

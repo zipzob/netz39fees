@@ -1,0 +1,18 @@
+Hallo <%= @fee.name %>,
+
+Dein Beitrag: <%= "#{@fee.fee} €" %>
+Deine Spende: <%= "#{@fee.donation} €" %>
+
+Klick bitte auf den nachfolgenden Link, um deinen Beitrag zu bestätigen.
+
+<%= root_url %>fees/confirm/<%= @fee.confirmation_token %>
+
+
+Um deinen Beitrag zu ändern, benutze bitte folgenden Link.
+
+<%= root_url %>fees/edit/<%= @fee.confirmation_token %>
+
+
+Solltest du keinen Beitrag erstellt haben, ignoriere diese Email.
+
+Netz39 e.V.

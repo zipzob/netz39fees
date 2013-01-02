@@ -1,0 +1,30 @@
+de:
+  title: "Beiträge und Spenden"
+  text: "Gib deinen vollständigen Namen an, den monatlichen Beitrag und die Höhe der monatlichen Spende."
+  edit_text: "Du kannst deinen monatlichen Beitrag und die Höhe deiner monatlichen Spende ändern."
+  important: "Wichtig"
+  important_text: "Wenn möglich, gib bitte die Emailadresse an, mit der du z.Z. beim Netz39 e.V. registriert bist!"
+  alert_message: "Korrigiere bitte die Fehler."
+  fee_email_send_alert: "Beitrag wurde erfolgreich erstellt. Eine Email mit einem Bestätigungslink wurde an deine Emailadresse geschickt. Klick bitte auf den Link, um deinen Beitrag zu bestätigen."
+  confirm_success: "<h4>Erfolg!</h4>Du hast deinen Beitrag bestätigt."
+  confirm_error: "<h4>Fehler!</h4>Der Beitrag, den du versuchst zu bestätigen, scheint nicht zu existieren."
+  fee_update: "Beitrag wurde erfolgreich geändert."
+  
+  fee: "Beitrag"
+  donation: "Spende (optional)"
+  full: "30€"
+  discount: "8€ (ermäßigt)"
+  
+  save: "Speichern"
+  saving: "Wird gespeichert..."
+  
+  activerecord:
+    errors:
+      models:
+        fee:
+          attributes:
+            name:
+              blank: "kann nicht leer bleiben"
+            email:
+              blank: "kann nicht leer bleiben"
+              invalid: "ist ungültig"
