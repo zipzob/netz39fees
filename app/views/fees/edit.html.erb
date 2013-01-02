@@ -10,7 +10,7 @@
   
     <%= bootstrap_form_for(@fee, url: fees_edit_url, method: :put, help: :block) do |f| %>
       <%= f.alert_message t(:alert_message) %>
-      <%= f.select :fee, [[t(:full), 30], [t(:discount), 8]], {}, {class: "span4", label: t(:fee)} %>
+      <%= f.select :fee, [[t(:full), 30.0], [t(:discount), 8.0]], {}, {class: "span4", label: t(:fee)} %>
       <%= f.text_field :donation, label: "#{t(:donation)} (optional)", class: "span4" %>
       <%= f.submit t(:save), { disable_with: t(:saving), class: "btn btn-primary pull-right" } %>
     <% end %>
