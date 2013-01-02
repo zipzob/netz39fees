@@ -5,6 +5,11 @@
       <div class="alert alert-success alert-block">
         <%= t(:confirm_success).html_safe %>
       </div>
+      
+      <p><strong>Name: </strong><%= @fee.name %></p>
+      <p><strong>Email: </strong><%= @fee.email %></p>
+      <p><strong><%= t :fee %>:</strong> <%= @fee.fee %> €</p>
+      <p><strong><%= t :donation %>:</strong> <%= @fee.donation ? @fee.donation : "0.0" %> €</p>
     <% else %>
       <div class="alert alert-error alert-block">
         <%= t(:confirm_error).html_safe %>

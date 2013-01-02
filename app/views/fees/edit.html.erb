@@ -6,11 +6,12 @@
 
   <div class="span4 offset4">
     <p><strong>Name: </strong><%= @fee.name %></p>
+    <p><strong>Email: </strong><%= @fee.email %></p>
   
     <%= bootstrap_form_for(@fee, url: fees_edit_url, method: :put, help: :block) do |f| %>
       <%= f.alert_message t(:alert_message) %>
       <%= f.select :fee, [[t(:full), 30], [t(:discount), 8]], {}, {class: "span4", label: t(:fee)} %>
-      <%= f.text_field :donation, label: t(:donation), class: "span4" %>
+      <%= f.text_field :donation, label: "#{t(:donation)} (optional)", class: "span4" %>
       <%= f.submit t(:save), { disable_with: t(:saving), class: "btn btn-primary pull-right" } %>
     <% end %>
   </div>

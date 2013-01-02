@@ -9,9 +9,10 @@ en:
   confirm_success: "<h4>Success!</h4>Your fee has been confirmed."
   confirm_error: "<h4>Error!</h4>The fee you're trying to confirm seem to be not existing."
   fee_update: "Successfully updated fee."
+  mailer_subject: "Fee confirmation"
   
   fee: "Fee"
-  donation: "Donation (optional)"
+  donation: "Donation"
   full: "30€ (full membership)"
   discount: "8€ (discount membership)"
 
