@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.9'
+gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -38,7 +38,7 @@ gem 'bootstrap_form', '~> 0.2.3'
 # Use unicorn as the app server
 # gem 'unicorn'
 
-# Use unicorn as the app server
+# Use thin as the app server
 gem "thin", "~> 1.5.0"
 
 # Deploy with Capistrano
