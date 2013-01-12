@@ -1,6 +1,6 @@
 class FeesController < InheritedResources::Base
   actions :new, :create, :index, :destroy
-  http_basic_authenticate_with name: "username", password: "secret", except: [:new, :create, :confirm, :edit, :update]
+  before_filter :authenticate_me, except: [:new, :create, :confirm, :edit, :update]
   before_filter :set_locale
   
   def create
@@ -27,11 +27,5 @@ class FeesController < InheritedResources::Base
     else
       render :action => 'edit'
     end
-  end
-  
-  private
-  
-  def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
   end
 end
