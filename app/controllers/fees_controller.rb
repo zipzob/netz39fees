@@ -1,6 +1,6 @@
 class FeesController < InheritedResources::Base
   actions :new, :create, :index, :destroy
-  before_filter :authenticate_me, except: [:new, :create, :confirm, :edit, :update]
+  before_filter :authenticate, only: [:index, :destroy]
   before_filter :set_locale
   
   def create
@@ -11,7 +11,7 @@ class FeesController < InheritedResources::Base
     @fee = Fee.find_by_confirmation_token(params[:token])
     if @fee
       @fee.confirmed = true
-      @fee.save
+      @fee.save!
     end
   end
   
