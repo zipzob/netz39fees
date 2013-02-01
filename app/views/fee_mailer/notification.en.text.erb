@@ -1,4 +1,4 @@
-Hello <%= @fee.name %>,
+Hallo <%= @fee.name %>,
 
 Your fee: <%= "#{@fee.fee} €" %>
 Your donation: <%= "#{@fee.donation} €" %>
@@ -7,10 +7,6 @@ Your Bank account:
 IBAN: <%= "#{@fee.iban}" %>
 BIC: <%= "#{@fee.bic}" %>
 Holder: <%= "#{@fee.bank_account_owner}" %>
-
-Please click the link below, to confirm your fee.
-
-<%= root_url %>fees/confirm/<%= @fee.confirmation_token %>
 
 
 To edit your fee, please use the next link.

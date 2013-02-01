@@ -3,6 +3,11 @@ class FeeMailer < ActionMailer::Base
   
   def confirmation(fee)
     @fee = fee
-    mail(to: fee.email, subject: t(:mailer_subject))
+    mail(to: fee.email, subject: t(:mailer_confirm))
+  end
+  
+  def notification(fee)
+    @fee = fee
+    mail(to: fee.email, subject: t(:mailer_notify))
   end
 end

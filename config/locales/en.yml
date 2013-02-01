@@ -1,20 +1,22 @@
 en:
   title: "fees and donations"
-  text: "Enter your full name, select your appropriate fee and enter the hight of your monthly donation."
-  edit_text: "You can change the monthly fee you need to pay and the amount of your monthly donation."
+  text: "Enter your full name, your email address, your bank account and enter the hight of your monthly donation."
+  text2: "The fee height is 30€ per month and will be collected at the begining of the quarter."
+  edit_text: "You can change your bank account and the amount of your monthly donation."
   important: "Important"
   important_text: "If possible, use the email address you previously used for signing up with Netz39 e.V.!"
+  discount_text: "It is possible to pay a dicounted fee of 10€ per month. If you wish to use this option, send an email to office@netz39.de."
   alert_message: "Please fix the errors below."
   fee_email_send_alert: "Fee was successfully created. An email with a confirmation link was send to your email address. Please click this link to confirm your fee."
   confirm_success: "<h4>Success!</h4>Your fee has been confirmed."
   confirm_error: "<h4>Error!</h4>The fee you're trying to confirm seem to be not existing."
   fee_update: "Successfully updated fee."
-  mailer_subject: "Fee confirmation"
+  mailer_confirm: "Fee confirmation"
+  mailer_notify: "Fee changed"
+  bank_account_owner: "Bank account holder"
   
   fee: "Fee"
   donation: "Donation"
-  full: "30€ (full membership)"
-  discount: "8€ (discount membership)"
-
+  
   save: "Save"
   saving: "Saving..."

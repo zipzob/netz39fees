@@ -22,10 +22,11 @@ class FeesController < InheritedResources::Base
   def update
     @fee = Fee.find_by_confirmation_token(params[:token])
     if @fee.update_attributes(params[:fee])
+      FeeMailer.notification(@fee).deliver
       flash[:notice] = t :fee_update
       redirect_to fees_edit_path
     else
-      render :action => 'edit'
+      render action: 'edit'
     end
   end
 end

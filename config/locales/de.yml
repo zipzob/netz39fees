@@ -11,7 +11,8 @@ de:
   confirm_success: "<h4>Erfolg!</h4>Du hast deinen Beitrag bestätigt."
   confirm_error: "<h4>Fehler!</h4>Der Beitrag, den du versuchst zu bestätigen, scheint nicht zu existieren."
   fee_update: "Beitrag wurde erfolgreich geändert."
-  mailer_subject: "Beitragsbestätigung"
+  mailer_confirm: "Beitragsbestätigung"
+  mailer_notify: "Beitragsdaten geändert"
   bank_account_owner: "Kontoinhaber"
   
   fee: "Beitrag"
