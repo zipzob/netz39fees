@@ -2,12 +2,14 @@
 
 one:
   name: MyString
-  fee: 1.5
   donation: 1.5
+  iban: IBANDE68210501700012345678
+  bic: MARKDEFFXXX
   email: myemail@example.com
 
 two:
   name: MyString
-  fee: 1.5
   donation: 1.5
+  iban: IBANDE68210501700012345678
+  bic: MARKDEFFXXX
   email: myemail@example.com

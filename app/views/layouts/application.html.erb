@@ -10,7 +10,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="span6 offset3">
+        <div class="span12">
           <% flash.each do |key, message| %>
             <p class="<%= alert_type(key) %> fade in"><button type="button" class="close" data-dismiss="alert">×</button><%= message %></p>
           <% end %>

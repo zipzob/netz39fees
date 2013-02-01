@@ -1,14 +1,18 @@
 Hallo <%= @fee.name %>,
 
-Dein Beitrag: <%= "#{@fee.fee} €" %>
-Deine Spende: <%= "#{@fee.donation} €" %>
+Dein Beitrag: <%= "#{@fee.fee}€" %>
+Deine Spende: <%= "#{@fee.donation}€" %>
+
+Deine Bankverbindung:
+IBAN: <%= "#{@fee.iban}" %>
+BIC: <%= "#{@fee.bic}" %>
 
 Klick bitte auf den nachfolgenden Link, um deinen Beitrag zu bestätigen.
 
 <%= root_url %>fees/confirm/<%= @fee.confirmation_token %>
 
 
-Um deinen Beitrag zu ändern, benutze bitte folgenden Link.
+Um deinen Angaben zu ändern, benutze bitte folgenden Link.
 
 <%= root_url %>fees/edit/<%= @fee.confirmation_token %>
 

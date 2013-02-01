@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="span6 offset3">
+  <div class="span6">
     <h2><%= t :title %></h2>
     <% if @fee %>
       <div class="alert alert-success alert-block">
@@ -8,8 +8,10 @@
       
       <p><strong>Name: </strong><%= @fee.name %></p>
       <p><strong>Email: </strong><%= @fee.email %></p>
-      <p><strong><%= t :fee %>:</strong> <%= @fee.fee %> €</p>
-      <p><strong><%= t :donation %>:</strong> <%= @fee.donation ? @fee.donation : "0.0" %> €</p>
+      <p><strong>IBAN: </strong><%= @fee.iban %></p>
+      <p><strong>BIC: </strong><%= @fee.bic %></p>
+      <p><strong><%= t :fee %>: </strong><%= @fee.fee %>€</p>
+      <p><strong><%= t :donation %>: </strong><%= @fee.donation %>€</p>
     <% else %>
       <div class="alert alert-error alert-block">
         <%= t(:confirm_error).html_safe %>

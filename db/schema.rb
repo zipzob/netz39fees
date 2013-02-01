@@ -11,17 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130112124133) do
+ActiveRecord::Schema.define(:version => 20130201102847) do
 
   create_table "fees", :force => true do |t|
     t.string   "name"
-    t.float    "fee"
-    t.float    "donation"
+    t.float    "fee",                :default => 30.0
+    t.float    "donation",           :default => 0.0
     t.datetime "created_at",                            :null => false
     t.datetime "updated_at",                            :null => false
     t.string   "email"
     t.string   "confirmation_token"
     t.boolean  "confirmed",          :default => false
+    t.string   "iban"
+    t.string   "bic"
   end
 
   create_table "users", :force => true do |t|

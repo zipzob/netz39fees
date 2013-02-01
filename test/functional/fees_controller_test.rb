@@ -12,7 +12,7 @@ class FeesControllerTest < ActionController::TestCase
 
   test "should create fee" do
     assert_difference('Fee.count') do
-      post :create, fee: { donation: @fee.donation, fee: @fee.fee, name: @fee.name, email: @fee.email }
+      post :create, fee: { donation: @fee.donation, name: @fee.name, email: @fee.email, iban: @fee.iban, bic: @fee.bic }
     end
 
     assert_redirected_to new_fee_path

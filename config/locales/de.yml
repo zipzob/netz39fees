@@ -1,9 +1,11 @@
 de:
   title: "Beiträge und Spenden"
-  text: "Gib deinen vollständigen Namen an, den monatlichen Beitrag und falls gewünscht, die Höhe der monatlichen Spende."
-  edit_text: "Du kannst deinen monatlichen Beitrag und die Höhe deiner monatlichen Spende ändern."
+  text: "Gib deinen vollständigen Namen an, deine Emailadresse, deine Bankverbindung für das SEPA-Lastschriftverfahren und falls gewünscht, die Höhe der monatlichen Spende."
+  text2: "Der Mitgliedsbeitrag beträgt 30€ pro Monat und wird immer zu Begin des Quartals für das Quartal eingezogen."
+  edit_text: "Du kannst deine Bankverbindung und die Höhe deiner monatlichen Spende ändern."
   important: "Wichtig"
   important_text: "Wenn möglich, gib bitte die Emailadresse an, mit der du z.Z. beim Netz39 e.V. registriert bist!"
+  discount_text: "Es gibt die Möglichkeit, einen ermäßigten Beitrag in Höhe von 10€ pro Monat zu zahlen. Wenn du diese Option nutzen möchtest, schreibe bitte eine Email an office@netz39.de."
   alert_message: "Korrigiere bitte die Fehler."
   fee_email_send_alert: "Beitrag wurde erfolgreich erstellt. Eine Email mit einem Bestätigungslink wurde an deine Emailadresse geschickt. Klick bitte auf den Link, um deinen Beitrag zu bestätigen."
   confirm_success: "<h4>Erfolg!</h4>Du hast deinen Beitrag bestätigt."
@@ -13,8 +15,6 @@ de:
   
   fee: "Beitrag"
   donation: "Spende"
-  full: "30€"
-  discount: "8€ (ermäßigt)"
   
   save: "Speichern"
   saving: "Wird gespeichert..."
@@ -29,3 +29,7 @@ de:
             email:
               blank: "kann nicht leer bleiben"
               invalid: "ist ungültig"
+            iban:
+              blank: "kann nicht leer bleiben"
+            bic:
+              blank: "kann nicht leer bleiben"

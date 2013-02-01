@@ -9,10 +9,10 @@ class ApplicationController < ActionController::Base
       user && user.authenticate(password)
     end
   end
-  
+
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end
-  
+
   helper_method :set_locale, :authenticate
 end

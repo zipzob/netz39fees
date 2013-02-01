@@ -1,5 +1,5 @@
 class FeeMailer < ActionMailer::Base
-  default from: "kontakt@netz39.de"
+  default from: "office@netz39.de"
   
   def confirmation(fee)
     @fee = fee
