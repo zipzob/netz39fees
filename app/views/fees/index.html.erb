@@ -3,7 +3,17 @@
     <h2><%= t :title %></h2>
     <table class="table table-striped">
       <thead>
-        <tr><th>Name</th><th>Email</th><th>IBAN</th><th>BIC</th><th>Fee</th><th>Donation</th><th class="text-info">Total</th><th><th></tr>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>IBAN</th>
+          <th>BIC</th>
+          <th>Bank account</th>
+          <th>Fee</th>
+          <th>Donation</th>
+          <th class="text-info">Total</th>
+          <th><th>
+        </tr>
       </thead>
       <tbody>
         <% @fees.each do |fee| %>
@@ -13,6 +23,7 @@
               <td><%= fee.email %></td>
               <td><%= fee.iban %></td>
               <td><%= fee.bic %></td>
+              <td><%= "#{fee.bank_account_owner}" %></td>
               <td><%= "#{fee.fee}€" %></td>
               <td><%= "#{fee.donation}€" %></td>
               <td><p class="text-info"><%= "#{(fee.fee + fee.donation).round(2)}€" %></p></td>

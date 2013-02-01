@@ -14,6 +14,7 @@
       <%= f.email_field :email, class: "span4" %>
       <%= f.text_field :iban, label: "IBAN", class: "span4" %>
       <%= f.text_field :bic, label: "BIC", class: "span4" %>
+      <%= f.text_field :bank_account_owner, label: "#{t(:bank_account_owner)} (optional)", class: "span4" %>
       <%= f.text_field :donation, label: "#{t(:donation)} (optional)", class: "span4" %>
       <%= f.submit t(:save), { disable_with: t(:saving), class: "btn btn-primary pull-right" } %>
     <% end %>

@@ -10,6 +10,7 @@
       <p><strong>Email: </strong><%= @fee.email %></p>
       <p><strong>IBAN: </strong><%= @fee.iban %></p>
       <p><strong>BIC: </strong><%= @fee.bic %></p>
+      <p><strong><%= t :bank_account_owner %>: </strong><%= @fee.bank_account_owner %></p>
       <p><strong><%= t :fee %>: </strong><%= @fee.fee %>€</p>
       <p><strong><%= t :donation %>: </strong><%= @fee.donation %>€</p>
     <% else %>

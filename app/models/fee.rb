@@ -1,5 +1,5 @@
 class Fee < ActiveRecord::Base
-  attr_accessible :donation, :fee, :name, :email, :activated, :iban, :bic
+  attr_accessible :donation, :fee, :name, :email, :activated, :iban, :bic, :bank_account_owner
   validates :name, :email, :iban, :bic, presence: true, on: :create
   validates :iban, :bic, presence: true, on: :update
   validates :email, format: { with: /\A[\w\.\-]+@[\w\-]+(.?[\w]+)+\z/ },
