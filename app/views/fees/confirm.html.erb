@@ -11,8 +11,8 @@
       <p><strong>IBAN: </strong><%= @fee.iban %></p>
       <p><strong>BIC: </strong><%= @fee.bic %></p>
       <p><strong><%= t :bank_account_owner %>: </strong><%= @fee.bank_account_owner %></p>
-      <p><strong><%= t :fee %>: </strong><%= @fee.fee %>€</p>
-      <p><strong><%= t :donation %>: </strong><%= @fee.donation %>€</p>
+      <p><strong><%= t :fee %>: </strong><%= number_to_currency @fee.fee %></p>
+      <p><strong><%= t :donation %>: </strong><%= number_to_currency @fee.donation %></p>
     <% else %>
       <div class="alert alert-error alert-block">
         <%= t(:confirm_error).html_safe %>

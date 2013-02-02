@@ -1,7 +1,7 @@
 Hello <%= @fee.name %>,
 
-Your fee: <%= "#{@fee.fee} €" %>
-Your donation: <%= "#{@fee.donation} €" %>
+Your fee: <%= "#{number_to_currency @fee.fee}" %>
+Your donation: <%= "#{number_to_currency @fee.donation}" %>
 
 Your Bank account:
 IBAN: <%= "#{@fee.iban}" %>
