@@ -17,7 +17,6 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'inherited_resources'
 gem 'bootstrap_form', '~> 0.2.3'
 
 gem 'bcrypt-ruby', '~> 3.0.0'

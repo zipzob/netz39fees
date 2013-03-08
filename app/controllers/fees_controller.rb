@@ -1,10 +1,23 @@
-class FeesController < InheritedResources::Base
-  actions :new, :create, :index, :destroy
+class FeesController < ApplicationController
   before_filter :authenticate, only: [:index, :destroy]
   before_filter :set_locale
+
+  def index
+    @fees = Fee.order(:name)
+  end
+  
+  def new
+    @fee = Fee.new
+  end
   
   def create
-    create!(notice: t(:fee_email_send_alert)) { new_fee_path }
+    @fee = Fee.new(params[:fee])
+    if @fee.save
+      flash[:notice] = t(:fee_email_send_alert)
+      redirect_to new_fee_path
+    else
+      render 'new'
+    end
   end
   
   def confirm
@@ -26,7 +39,14 @@ class FeesController < InheritedResources::Base
       flash[:notice] = t :fee_update
       redirect_to fees_edit_path
     else
-      render action: 'edit'
+      render 'edit'
     end
+  end
+  
+  def destroy
+    @fee = Fee.find(params[:id])
+    @fee.destroy
+    flash[:notice] = "Successfully destroyed fee."
+    redirect_to fees_url
   end
 end

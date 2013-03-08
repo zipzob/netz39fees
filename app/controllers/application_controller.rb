@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   private
 
   def authenticate
-    authenticate_or_request_with_http_basic("Application") do |name, password|
+    authenticate_or_request_with_http_basic do |name, password|
       user = User.find_by_username(name)
       user && user.authenticate(password)
     end
@@ -13,6 +13,4 @@ class ApplicationController < ActionController::Base
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end
-
-  helper_method :set_locale, :authenticate
 end
