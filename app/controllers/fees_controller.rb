@@ -1,5 +1,5 @@
 class FeesController < ApplicationController
-  before_filter :authenticate, only: [:index, :destroy]
+  before_filter :authenticate, only: [:index, :destroy, :edit_admin, :update_admin]
   before_filter :set_locale
 
   def index
@@ -40,6 +40,20 @@ class FeesController < ApplicationController
       redirect_to fees_edit_path
     else
       render 'edit'
+    end
+  end
+  
+  def edit_admin
+    @fee = Fee.find(params[:id])
+  end
+  
+  def update_admin
+    @fee = Fee.find(params[:id])
+    if @fee.update_attributes(params[:fee])
+      flash[:notice] = t :fee_update
+      redirect_to fees_edit_admin_path
+    else
+      render 'edit_admin'
     end
   end
   

@@ -29,7 +29,7 @@
               <td><p class="text-info"><%= "#{ number_to_currency(fee.fee + fee.donation)}" %></p></td>
               <td>
                 <div class="btn-group pull-right">
-                  <%= link_to "edit", fees_edit_path(fee.confirmation_token), class: "btn btn-mini" %>
+                  <%= link_to "edit", fees_edit_admin_path(fee), class: "btn btn-mini" %>
                   <%= link_to "delete", fee_path(fee), method: :delete, confirm: "Do you really want to delete this fee?", class: "btn btn-danger btn-mini" %>
                 </div>
               </td>
