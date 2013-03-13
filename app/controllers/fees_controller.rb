@@ -3,7 +3,9 @@ class FeesController < ApplicationController
   before_filter :set_locale
 
   def index
-    @fees = Fee.order(:name)
+    order = params[:order] if Fee.accessible_attributes.include?(params[:order])
+    order = 'name' if order.nil?
+    @fees = Fee.order(order.to_sym)
   end
   
   def new

@@ -4,13 +4,13 @@
     <table class="table table-striped table-condensed table-hover">
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>IBAN</th>
-          <th>BIC</th>
-          <th>Bank account</th>
-          <th>Fee</th>
-          <th>Donation</th>
+          <th><%= link_to "Name", fees_path(order: 'name') %></th>
+          <th><%= link_to "Email", fees_path(order: 'email') %></th>
+          <th><%= link_to "IBAN", fees_path(order: 'iban') %></th>
+          <th><%= link_to "BIC", fees_path(order: 'bic') %></th>
+          <th><%= link_to "Bank account", fees_path(order: 'bank_account_owner') %></th>
+          <th><%= link_to "Fee", fees_path(order: 'fee') %></th>
+          <th><%= link_to "Donation", fees_path(order: 'donation') %></th>
           <th class="text-info">Total</th>
           <th><th>
         </tr>
