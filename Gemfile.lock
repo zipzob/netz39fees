@@ -30,8 +30,14 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
+    better_errors (0.7.2)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+    binding_of_caller (0.7.1)
+      debug_inspector (>= 0.0.1)
     bootstrap_form (0.2.4)
     builder (3.0.4)
+    coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -40,6 +46,7 @@ GEM
       execjs
     coffee-script-source (1.6.1)
     daemons (1.1.9)
+    debug_inspector (0.0.2)
     erubis (2.7.0)
     eventmachine (1.0.2)
     execjs (1.4.0)
@@ -116,6 +123,8 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
+  better_errors
+  binding_of_caller
   bootstrap_form (~> 0.2.3)
   coffee-rails (~> 3.2.1)
   foreman

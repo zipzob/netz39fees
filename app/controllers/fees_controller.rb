@@ -3,9 +3,17 @@ class FeesController < ApplicationController
   before_filter :set_locale
 
   def index
-    order = params[:order] if Fee.accessible_attributes.include?(params[:order])
+    @overall = Fee.overall
+    @fee_sum = Fee.sum :fee
+    @donation_sum = Fee.sum :donation
+    
+    order = params[:order] if Fee.accessible_attributes.include?(params[:order]) || params[:order] == 'total'
     order = 'name' if order.nil?
-    @fees = Fee.order(order.to_sym)
+    if order == 'total'
+      @fees = Fee.all.sort! { |x,y| y.total <=> x.total }
+    else
+      @fees = Fee.order(order.to_sym)
+    end
   end
   
   def new
@@ -15,6 +23,7 @@ class FeesController < ApplicationController
   def create
     @fee = Fee.new(params[:fee])
     if @fee.save
+      FeeMailer.confirmation(@fee).deliver
       flash[:notice] = t(:fee_email_send_alert)
       redirect_to new_fee_path
     else
@@ -53,7 +62,7 @@ class FeesController < ApplicationController
     @fee = Fee.find(params[:id])
     if @fee.update_attributes(params[:fee])
       flash[:notice] = t :fee_update
-      redirect_to fees_edit_admin_path
+      redirect_to fees_url
     else
       render 'edit_admin'
     end
