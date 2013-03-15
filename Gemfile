@@ -23,4 +23,3 @@ gem 'bootstrap_form', '~> 0.2.3'
 
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'thin'
-gem 'foreman'
