@@ -1,0 +1,11 @@
+secret_token: "b2d18fe98e6ae66a7a722aad1d8fe64055031ed9271c0d729f4fc4aabfa6f6f2c4316874b5705e743c4e338971c5a43de8dbdd0339492aee25e4b03e44a8fdd5"
+
+development:
+  mailer_host: "localhost:3000"
+
+test:
+  mailer_host: "localhost:3000"
+
+production:
+  mailer_host: "example.com"
+  mailer_protocol: "https"
