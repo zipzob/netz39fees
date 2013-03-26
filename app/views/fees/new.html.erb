@@ -6,7 +6,7 @@
     <p><span class="label label-important"><%= t :important %></span> <%= t :important_text %></p>
     <p><span class="label label-info">Information</span> <%= t :discount_text %></p>
   </div>
-  
+
   <div class="span4 offset1">
     <%= bootstrap_form_for(@fee, url: fees_new_url, help: :block) do |f| %>
       <%= f.alert_message t(:alert_message) %>

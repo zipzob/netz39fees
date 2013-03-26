@@ -1,6 +1,6 @@
 class Fee < ActiveRecord::Base
   attr_accessible :donation, :fee, :name, :email, :confirmed, :iban, :bic, :bank_account_owner
-  
+
   validates :name, :email, :iban, :bic, presence: true, on: :create
   validates :iban, :bic, presence: true, on: :update
   validates :email, format: { with: /\A[\w\.\-]+@[\w\-]+(.?[\w]+)+\z/ },
@@ -11,11 +11,11 @@ class Fee < ActiveRecord::Base
                        on: :create
 
   before_create :generate_confirmation_token
-  
+
   def total
     self.fee + self.donation
   end
-  
+
   def self.overall
     self.sum(:fee) + self.sum(:donation)
   end

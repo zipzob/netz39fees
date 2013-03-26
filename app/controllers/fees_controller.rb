@@ -6,7 +6,7 @@ class FeesController < ApplicationController
     @overall = Fee.overall
     @fee_sum = Fee.sum :fee
     @donation_sum = Fee.sum :donation
-    
+
     order = params[:order] if Fee.accessible_attributes.include?(params[:order]) || params[:order] == 'total'
     order = 'name' if order.nil?
     if order == 'total'
@@ -15,11 +15,11 @@ class FeesController < ApplicationController
       @fees = Fee.order(order.to_sym)
     end
   end
-  
+
   def new
     @fee = Fee.new
   end
-  
+
   def create
     @fee = Fee.new(params[:fee])
     if @fee.save
@@ -30,7 +30,7 @@ class FeesController < ApplicationController
       render 'new'
     end
   end
-  
+
   def confirm
     @fee = Fee.find_by_confirmation_token(params[:token])
     if @fee
@@ -38,11 +38,11 @@ class FeesController < ApplicationController
       @fee.save!
     end
   end
-  
+
   def edit
     @fee = Fee.find_by_confirmation_token(params[:token])
   end
-  
+
   def update
     @fee = Fee.find_by_confirmation_token(params[:token])
     if @fee.update_attributes(params[:fee])
@@ -53,11 +53,11 @@ class FeesController < ApplicationController
       render 'edit'
     end
   end
-  
+
   def edit_admin
     @fee = Fee.find(params[:id])
   end
-  
+
   def update_admin
     @fee = Fee.find(params[:id])
     if @fee.update_attributes(params[:fee])
@@ -67,7 +67,7 @@ class FeesController < ApplicationController
       render 'edit_admin'
     end
   end
-  
+
   def destroy
     @fee = Fee.find(params[:id])
     @fee.destroy

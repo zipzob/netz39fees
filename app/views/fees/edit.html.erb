@@ -9,7 +9,7 @@
     <p><strong>Name: </strong><%= @fee.name %></p>
     <p><strong>Email: </strong><%= @fee.email %></p>
     <p><strong><%= t :fee %>: </strong><%= number_to_currency @fee.fee %></p>
-  
+
     <%= bootstrap_form_for(@fee, url: fees_edit_url, method: :put, help: :block) do |f| %>
       <%= f.alert_message t(:alert_message) %>
       <%= f.text_field :iban, label: "IBAN", class: "span4" %>
