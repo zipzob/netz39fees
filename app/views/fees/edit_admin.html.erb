@@ -1,16 +1,17 @@
 <div class="row">
   <div class="span4">
-	<%= bootstrap_form_for(@fee, url: fees_edit_admin_url, method: :put, help: :block) do |f| %>
-	  <%= f.alert_message t(:alert_message) %>
-	  <%= f.text_field :name, label: "Name", class: "span4" %>
-	  <%= f.text_field :email, label: "Email", class: "span4" %>
-	  <%= f.text_field :iban, label: "IBAN", class: "span4" %>
-	  <%= f.text_field :bic, label: "BIC", class: "span4" %>
-	  <%= f.text_field :bank_account_owner, label: "#{t(:bank_account_owner)} (#{t :if_different})", class: "span4" %>
-	  <%= f.text_field :fee, value: number_with_precision(f.object.fee), label: "#{t(:fee)} in €", class: "span4" %>
-	  <%= f.text_field :donation, value: number_with_precision(f.object.donation), label: "#{t(:donation)} in € (optional)", class: "span4" %>
-	  <%= f.check_box :confirmed, label: "confirmed" %>
-	  <%= f.submit t(:save), { disable_with: t(:saving), class: "btn btn-primary pull-right" } %>
-	<% end %>
+  <%= bootstrap_form_for(@fee, url: fees_edit_admin_url, method: :put, help: :block) do |f| %>
+    <%= f.alert_message t(:alert_message) %>
+    <%= f.text_field :first_name, label: "#{t(:first_name)}", class: "span4" %>
+    <%= f.text_field :last_name, label: "#{t(:last_name)}", class: "span4" %>
+    <%= f.text_field :email, label: "Email", class: "span4" %>
+    <%= f.text_field :iban, label: "IBAN", class: "span4" %>
+    <%= f.text_field :bic, label: "BIC", class: "span4" %>
+    <%= f.text_field :bank_account_owner, label: "#{t(:bank_account_owner)} (#{t :if_different})", class: "span4" %>
+    <%= f.text_field :fee, value: number_with_precision(f.object.fee), label: "#{t(:fee)} in €", class: "span4" %>
+    <%= f.text_field :donation, value: number_with_precision(f.object.donation), label: "#{t(:donation)} in € (optional)", class: "span4" %>
+    <%= f.check_box :confirmed, label: "confirmed" %>
+    <%= f.submit t(:save), { disable_with: t(:saving), class: "btn btn-primary pull-right" } %>
+  <% end %>
   </div>
 </div>

@@ -6,7 +6,7 @@
   </div>
 
   <div class="span4 offset1">
-    <p><strong>Name: </strong><%= @fee.name %></p>
+    <p><strong>Name: </strong><%= "#{@fee.first_name} #{@fee.last_name}" %></p>
     <p><strong>Email: </strong><%= @fee.email %></p>
     <p><strong><%= t :fee %>: </strong><%= number_to_currency @fee.fee %></p>
 

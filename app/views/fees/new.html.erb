@@ -10,7 +10,8 @@
   <div class="span4 offset1">
     <%= bootstrap_form_for(@fee, url: fees_new_url, help: :block) do |f| %>
       <%= f.alert_message t(:alert_message) %>
-      <%= f.text_field :name, class: "span4" %>
+      <%= f.text_field :first_name, label: "#{t(:first_name)}", class: "span4" %>
+      <%= f.text_field :last_name, label: "#{t(:last_name)}", class: "span4" %>
       <%= f.email_field :email, class: "span4" %>
       <%= f.text_field :iban, label: "IBAN", class: "span4" %>
       <%= f.text_field :bic, label: "BIC", class: "span4" %>

@@ -1,4 +1,4 @@
-Hello <%= @fee.name %>,
+Hello <%= "#{@fee.first_name} #{@fee.last_name}" %>,
 
 Your fee: <%= "#{number_to_currency @fee.fee}" %>
 Your donation: <%= "#{number_to_currency @fee.donation}" %>

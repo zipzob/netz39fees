@@ -6,7 +6,7 @@
         <%= t(:confirm_success).html_safe %>
       </div>
 
-      <p><strong>Name: </strong><%= @fee.name %></p>
+      <p><strong>Name: </strong><%= "#{@fee.first_name} #{@fee.last_name}" %></p>
       <p><strong>Email: </strong><%= @fee.email %></p>
       <p><strong>IBAN: </strong><%= @fee.iban %></p>
       <p><strong>BIC: </strong><%= @fee.bic %></p>

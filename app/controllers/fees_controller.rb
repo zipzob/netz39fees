@@ -8,7 +8,7 @@ class FeesController < ApplicationController
     @donation_sum = Fee.sum :donation
 
     order = params[:order] if Fee.accessible_attributes.include?(params[:order]) || params[:order] == 'total'
-    order = 'name' if order.nil?
+    order = 'first_name' if order.nil?
     if order == 'total'
       @fees = Fee.all.sort! { |x,y| y.total <=> x.total }
     else

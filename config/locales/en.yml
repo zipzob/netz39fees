@@ -17,6 +17,8 @@ en:
   if_different: "if different"
 
   fee: "Fee"
+  first_name: "First name"
+  last_name: "Last name"
   donation: "Donation"
 
   save: "Save"

@@ -5,7 +5,8 @@
     <table class="table table-striped table-condensed table-hover">
       <thead>
         <tr>
-          <th><%= link_to "Name", fees_path(order: 'name') %></th>
+          <th><%= link_to "First name", fees_path(order: 'first_name') %></th>
+          <th><%= link_to "Last name", fees_path(order: 'last_name') %></th>
           <th><%= link_to "Email", fees_path(order: 'email') %></th>
           <th><%= link_to "IBAN", fees_path(order: 'iban') %></th>
           <th><%= link_to "BIC", fees_path(order: 'bic') %></th>
@@ -23,7 +24,8 @@
             <% else %>
               <tr class="error">
             <% end %>
-              <td><%= fee.name %></td>
+              <td><%= fee.first_name %></td>
+              <td><%= fee.last_name %></td>
               <td><%= fee.email %></td>
               <td><%= fee.iban %></td>
               <td><%= fee.bic %></td>

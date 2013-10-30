@@ -15,13 +15,15 @@ de:
   mailer_notify: "Beitragsdaten geändert"
   bank_account_owner: "Kontoinhaber"
   if_different: "wenn abweichend"
-  
+
   fee: "Beitrag"
+  first_name: "Vorname"
+  last_name: "Nachname"
   donation: "Spende"
-  
+
   save: "Speichern"
   saving: "Wird gespeichert..."
-  
+
   activerecord:
     errors:
       models:
