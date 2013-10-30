@@ -1,7 +1,7 @@
 class Fee < ActiveRecord::Base
-  attr_accessible :donation, :fee, :name, :email, :confirmed, :iban, :bic, :bank_account_owner
+  attr_accessible :donation, :fee, :first_name, :last_name, :email, :confirmed, :iban, :bic, :bank_account_owner
 
-  validates :name, :email, :iban, :bic, presence: true, on: :create
+  validates :first_name, :last_name, :email, :iban, :bic, presence: true, on: :create
   validates :iban, :bic, presence: true, on: :update
   validates :email, format: { with: /\A[\w\.\-]+@[\w\-]+(.?[\w]+)+\z/ },
                     unless: Proc.new { |a| a.email.blank? },
