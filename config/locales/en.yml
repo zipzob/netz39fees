@@ -13,6 +13,8 @@ en:
   fee_update: "Successfully updated fee."
   mailer_confirm: "Fee confirmation"
   mailer_notify: "Fee changed"
+  mailer_new_fee: "New fee created"
+  mailer_fee_changed: "Fee changed"
   bank_account_owner: "Bank account holder"
   if_different: "if different"
 

@@ -3,12 +3,15 @@ secret_token: "b2d18fe98e6ae66a7a722aad1d8fe64055031ed9271c0d729f4fc4aabfa6f6f2c
 development:
   mailer_host: "localhost:3000"
   mailer_from: "root@localhost"
+  mailer_notify: "root@localhost"
 
 test:
   mailer_host: "localhost:3000"
   mailer_from: "root@localhost"
+  mailer_notify: "root@localhost"
 
 production:
   mailer_host: "example.com"
   mailer_from: "root@example.com"
+  mailer_notify: "root@localhost"
   mailer_protocol: "https"
