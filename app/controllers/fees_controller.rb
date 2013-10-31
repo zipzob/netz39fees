@@ -24,6 +24,7 @@ class FeesController < ApplicationController
     @fee = Fee.new(params[:fee])
     if @fee.save
       FeeMailer.confirmation(@fee).deliver
+      FeeMailer.new_fee(@fee).deliver
       flash[:notice] = t(:fee_email_send_alert)
       redirect_to new_fee_path
     else
@@ -47,6 +48,7 @@ class FeesController < ApplicationController
     @fee = Fee.find_by_confirmation_token(params[:token])
     if @fee.update_attributes(params[:fee])
       FeeMailer.notification(@fee).deliver
+      FeeMailer.fee_changed(@fee).deliver
       flash[:notice] = t :fee_update
       redirect_to fees_edit_path
     else

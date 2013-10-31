@@ -1,0 +1,15 @@
+Hallo,
+
+ein Beitrag wurde geändert.
+
+Name: <%= "#{@fee.first_name} #{@fee.last_name}" %>
+Email: <%= "#{@fee.email}" %>
+Beitrag: <%= "#{number_to_currency @fee.fee}" %>
+Spende: <%= "#{number_to_currency @fee.donation}" %>
+
+Bankverbindung:
+IBAN: <%= "#{@fee.iban}" %>
+BIC: <%= "#{@fee.bic}" %>
+Kontoinhaber: <%= "#{@fee.bank_account_owner}" %>
+
+Dein Beitragssystem
