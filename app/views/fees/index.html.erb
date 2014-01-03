@@ -31,8 +31,8 @@
               <td><%= fee.bic %></td>
               <td><%= "#{fee.bank_account_owner}" %></td>
               <td><%= "#{number_to_currency fee.fee}" %></td>
-              <td><%= "#{number_to_currency fee.donation}" %></td>
-              <td><p class="text-info"><%= "#{ number_to_currency(fee.fee + fee.donation)}" %></p></td>
+              <td><%= "#{number_to_currency(fee.donation ? fee.donation : 0)}" %></td>
+              <td><p class="text-info"><%= "#{ number_to_currency(fee.donation ? fee.fee + fee.donation : fee.fee)}" %></p></td>
               <td>
                 <div class="btn-group pull-right">
                   <%= link_to "edit", fees_edit_admin_path(fee), class: "btn btn-mini" %>
