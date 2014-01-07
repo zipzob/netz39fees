@@ -63,6 +63,7 @@ class FeesController < ApplicationController
   def update_admin
     @fee = Fee.find(params[:id])
     if @fee.update_attributes(params[:fee])
+      FeeMailer.notification(@fee).deliver
       flash[:notice] = t :fee_update
       redirect_to fees_url
     else
