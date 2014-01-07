@@ -1,8 +1,7 @@
 class Fee < ActiveRecord::Base
   attr_accessible :donation, :fee, :first_name, :last_name, :email, :confirmed, :iban, :bic, :bank_account_owner
 
-  validates :first_name, :last_name, :email, :iban, :bic, presence: true, on: :create
-  validates :iban, :bic, presence: true, on: :update
+  validates :first_name, :last_name, :email, :iban, :bic, presence: true
   validates :email, format: { with: /\A[\w\.\-]+@[\w\-]+(.?[\w]+)+\z/ },
                     unless: Proc.new { |a| a.email.blank? },
                     on: :create
@@ -11,6 +10,8 @@ class Fee < ActiveRecord::Base
                        on: :create
 
   before_create :generate_confirmation_token
+  before_save :normalize_iban
+  before_save :normalize_bic
 
   def total
     self.fee + self.donation
@@ -21,6 +22,14 @@ class Fee < ActiveRecord::Base
   end
 
   private
+
+  def normalize_iban
+    self.iban = self.iban.gsub(' ', '')
+  end
+
+  def normalize_iban
+    self.bic = self.bic.gsub(' ', '')
+  end
 
   def generate_confirmation_token
     begin
