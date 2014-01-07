@@ -27,7 +27,7 @@ class Fee < ActiveRecord::Base
     self.iban = self.iban.gsub(' ', '')
   end
 
-  def normalize_iban
+  def normalize_bic
     self.bic = self.bic.gsub(' ', '')
   end
 
