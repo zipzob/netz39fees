@@ -74,7 +74,7 @@ class FeesController < ApplicationController
   def destroy
     @fee = Fee.find(params[:id])
     @fee.destroy
-    flash[:notice] = "Successfully destroyed fee."
+    flash[:notice] = "Successfully deleted fee."
     redirect_to fees_url
   end
 end
