@@ -48,7 +48,7 @@ GEM
     daemons (1.1.9)
     debug_inspector (0.0.2)
     erubis (2.7.0)
-    eventmachine (1.0.2)
+    eventmachine (1.0.9.1)
     execjs (1.4.0)
       multi_json (~> 1.0)
     hike (1.2.1)
@@ -134,3 +134,6 @@ DEPENDENCIES
   thin
   uglifier (>= 1.0.3)
   wirble
+
+BUNDLED WITH
+   1.11.2
