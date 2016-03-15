@@ -14,6 +14,14 @@ class FeesController < ApplicationController
     else
       @fees = Fee.order(order.to_sym)
     end
+
+    respond_to do |format|
+      format.html { render :index }
+      format.xml {
+        @direct_debit = DirectDebitFees.new(@fees, params[:sepa][:reference], params[:sepa][:remittance_information], params[:sepa][:requested_date])
+        send_data @direct_debit.to_xml, filename: "sepa.xml", type: "application/xml", :disposition => 'attachment'#, :disposition => 'inline'
+      }
+    end
   end
 
   def new
