@@ -14,7 +14,6 @@
 ActiveRecord::Schema.define(:version => 20160315110031) do
 
   create_table "fees", :force => true do |t|
-    t.string   "name"
     t.float    "fee",                       :default => 30.0
     t.float    "donation",                  :default => 0.0
     t.datetime "created_at",                                   :null => false
