@@ -1,13 +1,13 @@
 class DirectDebitFees
 
-  def initialize(fees, reference, remittance_information, requested_date)
+  def initialize(fees, reference, remittance_information, requested_date, months_multiplier)
       init_direct_debit()
       @reference = reference
       @remittance_information = remittance_information
       @requested_date = Date.parse(requested_date)
 
       for fee in fees
-        add_fee(fee)
+        add_fee(fee, fee.total * months_multiplier.to_i)
       end
   end
 
@@ -27,7 +27,7 @@ class DirectDebitFees
     )
   end
 
-  def add_fee(fee)
+  def add_fee(fee, amount)
     @direct_debit.add_transaction(
       # Name of the debtor, in German: "Zahlungspflichtiger"
       # String, max. 70 char
@@ -39,7 +39,7 @@ class DirectDebitFees
 
       # Amount in EUR
       # Number with two decimal digit
-      amount:fee.total,
+      amount:amount,
 
       # # OPTIONAL: Instruction Identification, will not be submitted to the debtor
       # # String, max. 35 char

@@ -18,7 +18,7 @@ class FeesController < ApplicationController
     respond_to do |format|
       format.html { render :index }
       format.xml {
-        @direct_debit = DirectDebitFees.new(@fees, params[:sepa][:reference], params[:sepa][:remittance_information], params[:sepa][:requested_date])
+        @direct_debit = DirectDebitFees.new(@fees, params[:sepa][:reference], params[:sepa][:remittance_information], params[:sepa][:requested_date], params[:sepa][:multiplier])
         send_data @direct_debit.to_xml, filename: "sepa.xml", type: "application/xml", :disposition => 'attachment'#, :disposition => 'inline'
       }
     end
