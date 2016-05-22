@@ -1,0 +1,6 @@
+<%= form_tag(fees_path(format: :xml), method: "get", style: "display: inline") do %>
+  <%=link_to "#", class: "btn btn-primary xml_export_button", data: {toggle:"modal", target:"#xml_export_dialog"} do %>
+    <i class="fa fa-file-text-o"></i> SEPA XML Export
+  <% end %>
+  <%= render partial: "sepa_xml/xml_export_dialog"%>
+<% end %>

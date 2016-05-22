@@ -4,14 +4,23 @@ development:
   mailer_host: "localhost:3000"
   mailer_from: "root@localhost"
   mailer_notify: "root@localhost"
+  sepa_name: "Netz39 e.V." #Name of the initiating party and creditor, in German: "Auftraggeber", String, max. 70 char
+  sepa_iban: 'DE87200500001234567890' #International Bank Account Number of the creditor. String, max. 34 chars
+  sepa_creditor_identifier: 'DE98ZZZ09999999999' #Creditor Identifier, in German: Gläubiger-Identifikationsnummer. String, max. 35 chars
 
 test:
   mailer_host: "localhost:3000"
   mailer_from: "root@localhost"
   mailer_notify: "root@localhost"
+  sepa_name: "Netz39 e.V." #Name of the initiating party and creditor, in German: "Auftraggeber", String, max. 70 char
+  sepa_iban: 'DE87200500001234567890' #International Bank Account Number of the creditor. String, max. 34 chars
+  sepa_creditor_identifier: 'DE98ZZZ09999999999' #Creditor Identifier, in German: Gläubiger-Identifikationsnummer. String, max. 35 chars
 
 production:
   mailer_host: "example.com"
   mailer_from: "root@example.com"
   mailer_notify: "root@localhost"
   mailer_protocol: "https"
+  sepa_name: "Netz39 e.V." #Name of the initiating party and creditor, in German: "Auftraggeber", String, max. 70 char
+  sepa_iban: 'DE87200500001234567890' #International Bank Account Number of the creditor. String, max. 34 chars
+  sepa_creditor_identifier: 'DE98ZZZ09999999999' #Creditor Identifier, in German: Gläubiger-Identifikationsnummer. String, max. 35 chars

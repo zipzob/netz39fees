@@ -7,6 +7,7 @@ group :development do
   gem 'sqlite3'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem "letter_opener"
 end
 
 group :production do
@@ -24,3 +25,5 @@ gem 'bootstrap_form', '~> 0.2.3'
 
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'thin'
+
+gem 'sepa_king'

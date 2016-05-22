@@ -1,5 +1,5 @@
 class Fee < ActiveRecord::Base
-  attr_accessible :donation, :fee, :first_name, :last_name, :email, :confirmed, :iban, :bic, :bank_account_owner
+  attr_accessible :donation, :fee, :first_name, :last_name, :email, :confirmed, :iban, :bic, :bank_account_owner, :mandate_id, :mandate_date_of_signature
 
   validates :first_name, :last_name, :email, :iban, :bic, presence: true
   validates :email, format: { with: /\A[\w\.\-]+@[\w\-]+(.?[\w]+)+\z/ },
@@ -19,6 +19,10 @@ class Fee < ActiveRecord::Base
 
   def self.overall
     self.sum(:fee) + self.sum(:donation)
+  end
+
+  def name_on_transaction
+    (bank_account_owner.blank?) ? "#{first_name} #{last_name}" : "#{bank_account_owner}"
   end
 
   private
