@@ -16,6 +16,11 @@ class FeeMailer < ActionMailer::Base
     mail(to: CONFIG[:mailer_notify], subject: t(:mailer_new_fee))
   end
 
+  def fee_deleted(fee)
+    @fee = fee
+    mail(to: CONFIG[:mailer_notify], subject: t(:mailer_fee_deleted))
+  end
+
   def fee_changed(fee)
     @fee = fee
     mail(to: CONFIG[:mailer_notify], subject: t(:mailer_fee_changed))

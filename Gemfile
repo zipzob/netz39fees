@@ -20,6 +20,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'test-unit'
+
 gem 'jquery-rails'
 gem 'bootstrap_form', '~> 0.2.3'
 

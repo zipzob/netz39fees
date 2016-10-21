@@ -14,6 +14,7 @@ de:
   mailer_confirm: "Beitragsbestätigung"
   mailer_notify: "Beitragsdaten geändert"
   mailer_new_fee: "Neuer Beitrag angelegt"
+  mailer_fee_deleted: "Beitrag wurde gelöscht"
   mailer_fee_changed: "Beitragsdaten geändert"
   bank_account_owner: "Kontoinhaber"
   if_different: "wenn abweichend"
