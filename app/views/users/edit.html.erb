@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="span4">
+    <h2>Edit user</h2>
+    Username: <b><%= @user.username %></b><br />
+    <%= bootstrap_form_for(@user, url: user_url, method: :put, help: :block) do |f| %>
+      <%= f.alert_message t(:alert_message) %>
+      <%= f.password_field :password, label: "Password", class: "span4" %>
+      <%= f.submit t(:save), { disable_with: t(:saving), class: "btn btn-primary pull-right" } %>
+    <% end %>
+  </div>
+</div>
