@@ -1,0 +1,15 @@
+Hallo,
+
+a fee was deleted.
+
+Name: <%= "#{@fee.first_name} #{@fee.last_name}" %>
+Email: <%= "#{@fee.email}" %>
+Fee: <%= "#{number_to_currency @fee.fee}" %>
+Donation: <%= "#{number_to_currency @fee.donation}" %>
+
+Bank account:
+IBAN: <%= "#{@fee.iban}" %>
+BIC: <%= "#{@fee.bic}" %>
+Holder: <%= "#{@fee.bank_account_owner}" %>
+
+Your fee system
