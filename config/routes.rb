@@ -9,5 +9,7 @@ Netz39fees::Application.routes.draw do
 
   resources :fees, only: [:index, :new, :create, :destroy]
 
+  resources :users, except: [:show]
+
   root :to => 'fees#new'
 end
