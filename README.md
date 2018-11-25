@@ -18,20 +18,24 @@ curl -sSL https://get.rvm.io | bash -s stable
 - we need:
 	- Ruby 2.4.1
 
-- https://rvm.io/rubies/installing	
+- https://rvm.io/rubies/installing
 
 ```
 rvm install 2.4.1
 ```
-	
+
 ### Get source code
 
 ```
 git clone git@github.com:netz39/netz39fees.git
 cd netz39fees
 # ...
-rm Gemfile.lock
+bundle update
 bundle install
+# rm Gemfile.lock
+# bundle install
+# ...
+Save Changes to Gemfile.lock to git after successful update ;)
 # ...
 rake db:setup RAILS_ENV=development
 rake db:seed RAILS_ENV=development
@@ -41,7 +45,7 @@ rake db:migrate RAILS_ENV=development
 # Start server
 ruby script/rails server
 
-# Open Browser at http://localhost:3000/ 
+# Open Browser at http://localhost:3000/
 ```
 
 ## Start server
